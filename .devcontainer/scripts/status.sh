@@ -9,6 +9,9 @@ echo 'cURL:' $(curl --version | head -n 1)
 # Show the installed version of Git
 echo 'Git:' $(git --version)
 
+# Show the installed version of Libatomic
+echo 'Libatomic:' $(dpkg-query -W -f='${Version}\n' libatomic1)
+
 # Show the installed version of NVM
 source $NVM_DIR/nvm.sh && echo 'NVM:' $(nvm --version)
 
