@@ -19,6 +19,9 @@ RUN curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git
 RUN echo "source ~/.git-prompt.sh" >> ~/.bashrc
 RUN echo "PS1='\[\\\033[01;32m\]\u \[\\\033[35m\]\s \[\\\033[01;33m\]\w \[\\\033[01;36m\]\$(__git_ps1 \"(%s)\") \[\\\033[00m\]\$ '" >> ~/.bashrc
 
+# Install Libatomic1, required for recent Node versions
+RUN apt-get -y install libatomic1
+
 # Install NVM
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 
