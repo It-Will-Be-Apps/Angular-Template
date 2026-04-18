@@ -17,6 +17,11 @@ echo 'Updating Git...'
 apt-get -y install git
 echo 'Git updated!'
 
+# Update Libatomic
+echo 'Updating Libatomic...'
+apt-get -y install libatomic1
+echo 'Libatomic updated!'
+
 # Update NVM
 echo 'Updating NVM...'
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
