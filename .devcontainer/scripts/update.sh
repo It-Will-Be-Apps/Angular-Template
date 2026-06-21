@@ -38,3 +38,7 @@ echo 'Node.js updated!'
 echo 'Updating NPM...'
 nvm install-latest-npm
 echo 'NPM updated!'
+
+# Update the Angular CLI
+echo 'Angular CLI:' $(ng --version)
+npm install -g @angular/cli
